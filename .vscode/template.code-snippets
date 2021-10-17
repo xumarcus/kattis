@@ -1,0 +1,35 @@
+{
+	// Place your kattis workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	"include": {
+		"scope": "cpp",
+		"prefix": "include",
+		"body": [
+			"#pragma GCC optimize (\"O3\")",
+			"#include <bits/stdc++.h>",
+			"",
+			"template <class T, class U>",
+			"class Comparator {",
+			"    using F = std::function<U (const T&)>;",
+			"    F _f;",
+			"    public:",
+			"        Comparator(const F& f) : _f(f) {}",
+			"        bool operator()(const T& u, const T& v) const noexcept {",
+			"            return _f(u) < _f(v);",
+			"        }",
+			"};",
+			"",
+			"int main() {",
+			"    std::ios_base::sync_with_stdio(false);",
+			"    std::cin.tie(nullptr);",
+			"    $0",
+			"    return 0;",
+			"}",
+		],
+		"description": "Default template"
+	}
+}
